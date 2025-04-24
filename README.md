@@ -1,5 +1,7 @@
 # 🩺 Diabetes Prediction App
 
+🎯 **[Click here to use the live app](https://diabetes-prediction-app-c2jq6gax9fprfqicwnusbj.streamlit.app/)**
+
 This project uses machine learning to predict whether an individual is diabetic or not based on medical diagnostic features. It is built using the Pima Indians Diabetes dataset and deployed as an interactive web app using **Streamlit**.
 
 ---
