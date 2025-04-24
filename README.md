@@ -41,6 +41,41 @@ To build a robust and interpretable machine learning model that can assist in th
 
 ---
 
+## 📊 Pattern Discovery with Association Rule Mining
+
+Beyond predictive modeling, this project also implements **Frequent Itemset Mining** using the **Apriori algorithm** to uncover interpretable, high-confidence patterns among diabetic patients.
+
+### 🔎 Why Use It?
+Association rule mining helps uncover **co-occurring medical characteristics** that may indicate a higher likelihood of diabetes — offering domain experts a transparent view into the data.
+
+### 🧮 Process:
+
+- Selected meaningful medical features: `Glucose`, `BloodPressure`, `BMI`, and `Age`.
+- Binned continuous variables into categories (e.g., `"Glucose=High"`, `"BMI=Obese"`).
+- Filtered dataset to include only diabetic patients (`Outcome = 1`).
+- Used **`mlxtend.apriori`** and **`association_rules`** to mine and analyze rules with:
+  - **min_support** = 0.2
+  - **min_confidence** = 0.9
+
+### 📌 Example Rule:
+> **If:** `BMI = Obese` **AND** `Age = Older`  
+> **Then:** `Glucose = High`  
+> - **Support:** 0.27  
+> - **Confidence:** 0.91  
+> - **Lift:** 1.42
+
+This rule suggests that older individuals with high BMI are highly likely to also show elevated glucose levels — a useful insight for preemptive diagnostics.
+
+### 📦 Libraries Used:
+- `mlxtend.frequent_patterns`
+- `TransactionEncoder`
+- `apriori`
+- `association_rules`
+
+This module complements the prediction pipeline by offering **interpretable, unsupervised insights** into the diabetic population.
+
+---
+
 ## 🧠 Models Applied
 
 | Model                 | Libraries Used       | Tuning Used          |
